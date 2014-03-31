@@ -1,0 +1,31 @@
+body{
+	font-family: Arial;
+	width: 100%;
+	background-color: white;
+}
+#main{
+	width:960px;
+	margin: 0 auto;
+	background-color: green;
+	height: 600px;
+	text-align: center
+}
+.titles {
+	padding-top: 50px;
+	font-size: 36px;
+
+}
+#wantsToPurchase{
+
+}
+#wantsToRefinance{
+
+}
+.questions{
+	margin: 0 auto;
+	color: white;
+}
+.questionButtons{
+	display: inline-block;
+}
+#
