@@ -6,6 +6,7 @@ $(document).ready(function() {
 	var bkDate = 0;
 	var shortSaleDate = 0;
 	var domicileState;
+	var domicileCounty;
 
 	$("#question1").show();
 	$("#question2").hide();
@@ -25,6 +26,7 @@ $(document).ready(function() {
 			$("#refi1").hide();
      }   
     })
+
     $("#citzenNo").on({
         click: function() {
         	UScitzenship = "yes";
@@ -44,8 +46,9 @@ $(document).ready(function() {
 			$("#purchase2").hide();
 			$("#purchase3").hide();	
 			$("#refi1").hide();
-     }   
+     	}   
     })
+
     $("#wantsToRefinance").on({
         click: function() {
         	$("#question1").hide();
@@ -54,21 +57,35 @@ $(document).ready(function() {
 			$("#purchase2").hide();
 			$("#purchase3").hide();
 			$("#refi1").hide();
-     }   
+     	}   
     })
+
     $("#stateIsSelected").on({
         click: function() {
-        	domicileState=$('#stateIsSelected').val();
-        	console.log($('stateIsSelected').val());
-        	$("#question1").hide();
+			domicileState = $('#whatState :selected').text();
+			console.log(domicileState);
+		   	$("#question1").hide();
         	$("#question1").hide();
 			$("#question2").hide();
 			$("#purchase1").hide();
 			$("#purchase2").show();
 			$("#purchase3").hide();
 			$("#refi1").hide();
-     }   
-    })
+		}
+	})
 
+	$("#countyIsSelected").on(
+		{click: function() {
+			domicileCounty  = $('#whatCounty :selected').text();
+			console.log(domicileCounty);
+		   	$("#question1").hide();
+        	$("#question1").hide();
+			$("#question2").hide();
+			$("#purchase1").hide();
+			$("#purchase2").hide();
+			$("#purchase3").show();
+			$("#refi1").hide();
+     	}   
+    })
 
 });
